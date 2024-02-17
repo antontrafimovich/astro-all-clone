@@ -1,0 +1,28 @@
+---
+
+---
+
+<div class="w-6">
+  <form id="search-form" class="flex">
+    <input
+      class="border border-solid border-black rounded"
+      name="q"
+      id="search-form-input"
+      type="text"
+      autofocus
+    />
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById("search-form");
+  const search = document.getElementById("search-form-input");
+
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log(e?.target?.elements?.namedItem("q").value);
+  });
+
+  search?.addEventListener("input", (e) => console.log(e));
+</script>
